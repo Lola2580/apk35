@@ -623,3 +623,39 @@ body {
 .history-empty {
   color: #d5e5ff !important;
 }
+
+body {
+  position: relative;
+  isolation: isolate;
+  background: #050816;
+}
+
+#bgVideo {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.video-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 8, 24, 0.35);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.app {
+  position: relative;
+  z-index: 1;
+}
+
+.glass-panel,
+.history-panel {
+  background: rgba(5, 12, 29, 0.30);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
