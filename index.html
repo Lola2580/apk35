@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050816">
+  <title>Wingo Neon Predictor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+
+    <!-- Main unified glass panel -->
+    <section class="glass-panel">
+      <div class="panel-top">
+        <span class="line"></span>
+        <p class="eyebrow">TARGET PERIOD</p>
+        <span class="line"></span>
+      </div>
+
+      <div id="targetPeriod" class="target-period">Loading...</div>
+
+      <div class="separator">
+        <span></span>
+      </div>
+
+      <div class="prediction-layout">
+        <div class="timer-ring">
+          <div class="timer-inner">
+            <div id="timer">00:60</div>
+          </div>
+          <svg class="timer-progress" viewBox="0 0 160 160" aria-hidden="true">
+            <circle class="ring-track" cx="80" cy="80" r="72"></circle>
+            <circle id="ringProgress" class="ring-value" cx="80" cy="80" r="72"></circle>
+          </svg>
+        </div>
+
+        <div class="prediction-area">
+          <p class="eyebrow">PREDICTION</p>
+          <div id="prediction" class="prediction-value waiting">WAITING</div>
+        </div>
+      </div>
+
+      <div class="info-strip">
+        <div class="info-item">
+          <span class="info-icon">◷</span>
+          <span>Next round countdown</span>
+        </div>
+
+        <div class="info-divider"></div>
+
+        <div class="info-item planner-info">
+          <span class="info-icon">⌘</span>
+          <span id="plannerMessage">
+            Waiting for planner signal
+            <strong id="plannerPeriod">--</strong>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- History rows only: no heading -->
+    <section class="history-panel" aria-label="Prediction history">
+      <div id="historyList" class="history-list">
+        <div class="history-empty">Waiting for history...</div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
